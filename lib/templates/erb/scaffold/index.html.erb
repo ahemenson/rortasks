@@ -13,8 +13,9 @@
   </thead>
 
   <tbody>
-    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-      <tr>
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>   
+      <tr <% if plural_table_name.titleize == "Bugs" or plural_table_name.titleize == "Issues" or plural_table_name.titleize == "Products" or plural_table_name.titleize == "Campaigns" -%> class="w3-hover-green"<% end -%>
+>
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
         <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>

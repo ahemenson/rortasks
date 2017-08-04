@@ -33,8 +33,8 @@
   </thead>
 
   <tbody>
-    <% @bugs.each do |bug| %>
-      <tr>
+    <% @bugs.each do |bug| %>   
+      <tr  class="w3-hover-green">
         <td><%= bug.code %></td>
         <td><%= bug.product %></td>
         <td><%= bug.component %></td>
